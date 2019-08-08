@@ -4,7 +4,8 @@ import scrapy
 
 class FiveringsarmorySpider(scrapy.Spider):
   name = 'fiveringsarmory'
-  start_urls = ['https://fiveringsarmory.com//']
+  start_urls = ['http://fiveringsarmory.com//']
+  handle_httpstatus_list = [404]
 
   def parse(self, response):
     yield { 
